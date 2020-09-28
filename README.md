@@ -1,4 +1,4 @@
-# SoFASTER
+# Shadowfax
 
 This branch hosts prototype code for the Shadowfax research work, made available to anonymous VLDB 2021 reviewers under the existing reviewer confidentiality agreement.
 
