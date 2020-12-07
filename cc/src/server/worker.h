@@ -163,7 +163,7 @@ class Worker {
 
     // Next, try to receive incoming RPCs. The RPC poller will take care of
     // enqueuing any received RPC on the appropriate session/connection.
-    rpcPoller.poll();
+    if (incomingSessions.size() > 0) rpcPoller.poll();
 
     // Refresh the epoch before processing requests on each session.
     faster->Refresh();

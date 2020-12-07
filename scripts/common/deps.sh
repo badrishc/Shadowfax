@@ -11,4 +11,5 @@ apt update && \
     libwebsocketpp-dev openssl libssl-dev ninja-build libxml2-dev g++-5 \
     net-tools vim python-pip gdb
 
+pip install --upgrade pip
 pip install psutil numpy

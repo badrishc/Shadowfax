@@ -168,9 +168,10 @@ class Sofaster {
     if (index < 0) {
       // For us to be able to buffer and send out requests from a
       // session, we currently need these requests to be of same size.
-      static_assert(sizeof(rmw_t) == sizeof(read_t));
-      static_assert(sizeof(rmw_t) == sizeof(upsert_t));
-      static_assert(sizeof(rmw_t) == sizeof(cond_upsert_t));
+      static_assert(sizeof(rmw_t) == sizeof(read_t), "RPC sizes don't match");
+      static_assert(sizeof(rmw_t) == sizeof(upsert_t), "RPC sizes don't match");
+      static_assert(sizeof(rmw_t) == sizeof(cond_upsert_t),
+                    "RPC sizes don't match");
       auto batch =
         ((transmitBytes - sizeof(RequestBatchHdr)) / sizeof(rmw_t)) *
         sizeof(rmw_t);
@@ -193,9 +194,10 @@ class Sofaster {
   inline void addSession(std::string ip, std::string port) {
     // For us to be able to buffer and send out requests from a
     // session, we currently need these requests to be of same size.
-    static_assert(sizeof(rmw_t) == sizeof(read_t));
-    static_assert(sizeof(rmw_t) == sizeof(upsert_t));
-    static_assert(sizeof(rmw_t) == sizeof(cond_upsert_t));
+    static_assert(sizeof(rmw_t) == sizeof(read_t), "RPC sizes don't match");
+    static_assert(sizeof(rmw_t) == sizeof(upsert_t), "RPC sizes don't match");
+    static_assert(sizeof(rmw_t) == sizeof(cond_upsert_t),
+                    "RPC sizes don't match");
     auto batch =
       ((transmitBytes - sizeof(RequestBatchHdr)) / sizeof(rmw_t)) *
       sizeof(rmw_t);
