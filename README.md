@@ -1,6 +1,7 @@
 # Shadowfax
 
-This branch hosts prototype code for the Shadowfax research work, made available to anonymous VLDB 2021 reviewers under the existing reviewer confidentiality agreement.
+This branch hosts prototype code for reproducing results in the Shadowfax research work (to appear in VLDB 2021). 
+This work uses a fork of FASTER, which is available upstream [here](https://github.com/microsoft/FASTER).
 
 # Running Shadowfax
 
